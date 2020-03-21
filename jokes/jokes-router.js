@@ -1,10 +1,11 @@
 const axios = require('axios');
 
 const router = require('express').Router();
+const { restrict, sessions } = require('../middleware/restrict');
 
 router.get('/', (req, res) => {
   const requestOptions = {
-    headers: { accept: 'application/json' },
+    headers: { accept: 'application/json' }
   };
 
   axios
